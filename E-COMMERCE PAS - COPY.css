@@ -1,0 +1,480 @@
+body{
+    font-family: sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    color: #333;
+}
+
+.teks{
+    color: white;
+    text-align: center;
+}
+
+.content{
+    color: white;
+    text-align: center;
+}
+        
+.bew{
+    color: white;
+    text-align: center;
+}
+
+.sir{
+    color: white;
+    text-align: center;
+}
+
+    /* hamburger menu styles */
+    .hamburger{
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+        padding: 0.5rem;
+    }
+
+    .hamburger span {
+        width: 25px;
+        height: 3px;
+        background: #333;
+        margin: 3px 0;
+        transition: 0.3s;
+    }
+
+    #menu-toggle {
+        display: none;
+    }
+
+    #menu-toggle:checked ~ .hamburger span:nth-child(1) {
+     transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    #menu-toggle:checked ~.hamburger span:nth-child(2) {
+        opacity: 0;
+    }
+
+    #menu-toggle:checked ~ .hamburger span:nth-child(3) {
+     transform: rotate(45deg) translate(-5px, 6px);
+    }
+
+    @media(max-width: 768px) {
+    .navbar {
+        padding: 0 1rem;
+        height: 60px;
+    }
+    .navbar .logo {
+        font-size: 1.5rem;
+    }
+    .hamburger{
+        display: flex;
+    }
+}
+
+.navbar .nav-links {
+    display: flex;
+    list-style: none;
+}
+
+    .navbar .nav-links li {
+        margin-left: 2rem;
+    }
+        
+    .navbar .nav-links a {
+        color: #333;
+        text-decoration: none;
+        font-weight: 500;
+        position: relative;
+        transition:  all 0.3  ease; 
+        padding: 0.5rem 0;
+    }
+
+.navbar .nav-links a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(45deg purple, rgb(77, 38, 38));
+    transition: witdh 0.3 ease;
+}
+
+    .navbar .nav-links a:hover::after {
+        width: 100%;
+    }
+
+    .navbar .nav-links a:hover {
+        color: #667eea;
+        transform: translateY(-2px);
+    }
+
+
+    .navbar .nav-links a.active {
+        color: #667eea;
+    }
+
+    .navbar .nav-links a.active::after {
+        width: 100%;
+    }
+
+    .navbar{
+        background-color: linear-gradient(aqua,lime,aqua,lime);
+        width: 95%;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 2rem;
+        height: 70px;
+    }
+        
+    .navbar .logo {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: rgb(32, 29, 14);
+        text-decoration: none;
+        letter-spacing: 1px;
+    }
+
+/* CARD */
+.card{
+    background: linear-gradient(135deg, aqua 0%, blue 100%);
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px black;
+    transform: translateY(50px);
+    animation: fadeup 0.8s forwards;
+}
+
+/* AMBATUKAM */
+.ambatukam{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 40px;
+}
+
+/* SHIMER-EFFECT */
+.shimer{
+    position: relative;
+    overflow: hidden;
+}
+
+.shimer::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(900deg, transparent, azure, transparent);
+    animation: shimer 1.5s infinite;
+}
+
+.geo-dash{
+    height: 100px;
+    width: 100px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    background: url(Fiyud\ 2nd\ Profile.jpg);
+    background-size: cover;
+    border-radius: 100%;
+}
+
+.about{
+    height: 100px;
+    width: 100px;
+    border-radius: 10px;
+    border-radius: 100%;
+    margin-bottom: 15px;
+    background: url(Passcode\ -\ Copy\ \(2\).jpeg);
+    background-size: cover;
+}
+
+.exp{
+    height: 100px;
+    width: 100px;
+    border-radius: 10px;
+    border-radius: 100%;
+    margin-bottom: 15px;
+    background: url(hitam.jpg);
+}
+
+.song{
+    height: 100px;
+    width: 100px;
+    border-radius: 10px;
+    border-radius: 100%;
+    margin-bottom: 15px;
+    background: url(Dare\ -\ Sayfalse\,\ TRXVELER\,\ DJ\ ALIM.png);
+    background-size: cover;
+}
+
+.attendence h1{
+    background: transparent;
+    color: azure;
+    margin-top: 210px;
+    height: 100px;
+    text-align: center;
+}
+
+.attend h1{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 30px;
+}
+
+/* CARDITY */
+.cardity{
+    background: linear-gradient(135deg, aqua 0%, blue 100%);
+    background-size: cover;
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+}
+
+/* CARDITAN */
+.carditan{
+    background: linear-gradient(135deg, green 0%, lime 100%);
+    background-size: cover;
+    width: 100%;
+    height: 210px;
+    border-radius: 10px;
+}
+
+.cardity h4{
+    text-align: center;
+    font-size: 21px;
+    color: azure;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.h3{
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+}
+
+.black{
+    color: azure;
+    text-align: center;
+    font-size: 15px;
+    margin-right: 33%;
+    font-weight: bold;
+}
+
+.aqua{
+    color: aqua;
+    text-align: center;
+    font-size: 15px;
+    margin-left: 33%;
+    font-weight: bold;
+}
+
+.musical{
+    margin-top: 215px;
+}
+
+.musical h1{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* CARDITARY */
+.carditary{
+    background: linear-gradient(135deg, aqua 0%, blue 100%);
+    background-size: cover;
+    width: 100%;
+    max-width: 100%;
+    text-align: left;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.h3-67{
+    color: azure;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+}
+
+        .modal{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.3s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal:target{
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-content{
+            background: linear-gradient(135deg, aqua 0%, blue 100%);
+            background-size: cover;
+            backdrop-filter: blur(10px) blue;
+            padding: 30px;
+            border-radius: 16px;
+            width: 350px;
+            color: blue;
+            position: relative;
+            box-shadow: 0 8px 32px 0 black;
+            animation: fadein 0.4s ease;
+        }
+
+        @keyframes fadein {
+            from{
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to{
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .close{
+            position: absolute;
+            top: 25px;
+            right: 15px;
+            text-decoration: underline;
+            font-size: 27px;
+            color: azure;
+        }
+
+        .modal-content h2{
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .input-group {
+            margin-bottom: 16px;
+            border-radius: 20px;
+        }
+
+        .input-group label{
+            font-size: 21px;
+            display: inline-block;
+            margin-bottom: 3px;
+        }
+
+        .input-group input{
+            width: 150px;
+            padding: 8px;
+            border-radius: 10px;
+            border: 5px solid navy;
+            outline: invert;
+        }
+
+        .btn{
+            width: 75px;
+            padding: 13px;
+            border: navy;
+            border-radius: 10px;
+            background: navy;
+            color: azure;
+            font-weight: bold;
+        }
+
+        .btn:hover{
+            background: aqua;
+        }
+
+        .footer-text{
+            text-align: center;
+            margin-top: 25px;
+            font-size: 21px;
+        }
+
+        .footer-text a{
+            color: aqua;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-decoration: underline;
+        }
+
+.experience{
+    text-align: center;
+    color: azure;
+    font-size: 31px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 200px;
+}
+
+.login{
+    background-color: linear-gradient(135deg, aqua 0%, blue 100%);
+    background-size: cover;
+    width: 100%;
+    max-width: 100%;
+    text-align: left;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.nav-links{
+    background: linear-gradient(135deg, aqua 0%, blue 100%);
+    background-size: cover;
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+}
+
+.open-modal{
+    color: azure;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    font-size: 21px;
+    margin-left: 33%;
+    font-weight: bold;
+}
+
+@keyframes sideanimation {
+    from{
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    logical{
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+}
+
+.expert{
+    background: url(Geometry\ Dash\ 2.2\ -\ Account.png);
+    background-size: cover;
+    width: 50%;
+    height: 385px;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.expertant{
+    color: azure;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.h3-class{
+    text-align: left;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 21px;
+}
